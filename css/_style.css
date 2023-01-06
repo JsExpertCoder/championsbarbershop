@@ -1,0 +1,56 @@
+.hr {
+  background: #ffc107;
+  width: 50%;
+  height: 2px;
+}
+.fabio{
+  width:70%;
+}
+._nav {
+  display: none;
+}
+.h {
+  color: #FFF;
+  font-size: 2rem;
+}
+.h.black {
+  color: #000;
+}
+
+.color {
+  color: #ffc107
+}
+.x {
+  font-size: 1.2rem;
+}
+.plus {
+  font-size: 1rem;
+}
+.testimonial {
+  height: auto;
+  background: #FFF;
+  box-shadow: 0 1px 6px 0 #20212447;
+  /* max-width: 250px; */
+  margin: 5px;
+  border-radius: 20px;
+}
+.top-testimonial img {
+  width: 100px;
+  border-radius: 100%;
+  margin: 5px;
+}
+.name {
+  color:#ffc107
+}
+@media screen and (max-width: 800px) {
+  .fabio {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  ._nav {
+    display: block;
+  }
+}
+
