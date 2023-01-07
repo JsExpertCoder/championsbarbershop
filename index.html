@@ -20,10 +20,83 @@
 
   <!-- Theme Style -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/styletwo.css">
+  <link rel="stylesheet" href="css/styleTwo.css">
 </head>
 
 <body>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Agende um Serviço</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="index.html" method="get">
+            <div class="form-group">
+              <label for="name" class="col-form-label">Nome:</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+              <label for="Service" class="col-form-label">Serviço:</label>
+              <select class="form-control" name="Service" id="Service">
+                <optgroup label="Corte de Cabelo">
+                  <option value="volvo">Panck</option>
+                  <option value="saab">Francês</option>
+                  <option value="saab">Careca</option>
+                  <option value="saab">Dois Tempos</option>
+                </optgroup>
+                <optgroup label="Corte de barba">
+                  <option value="mercedes">Corte Básico</option>
+                  <option value="audi">Corte Completo</option>
+                </optgroup>
+                <optgroup label="Lavagem do Cabelo">
+                  <option value="mercedes">Lavagem Básica</option>
+                  <option value="audi">Lavagem Completa</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="datetime" class="col-form-label">Data e Hora:</label>
+              <input  class="form-control" type="datetime-local" name="datetime" id="datetime" required>
+            </div>
+            <div class="form-group">
+              <label for="contact" class="col-form-label">Contacto:</label>
+              <input  class="form-control" type="text" name="contact" id="contact" placeholder="Nº de Telefone ou Email" required>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Fechar</button>
+          <button type="submit" class="btn btn-success" data-dismiss="modal" data-target="#exampleModalCenter" data-toggle="modal">Agendar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Agendamento Conluído</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Você receberá uma chamada ou um email confirmando o seu agendamento, Obrigado.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <header role="banner">
 
@@ -73,7 +146,8 @@
           <div class="mb-5 element-animate">
             <h1 class="display-4">Mais do que um Corte <br>de Cabelo</h1>
             <p>Tratamos do seu cabelo com um campeão</p>
-            <button type="button" class="btn btn-lg btn-outline-warning">Agendar</button>
+            <button type="button" class="btn btn-lg btn-outline-warning" data-toggle="modal"
+              data-target="#exampleModal">Agendar</button>
             <!-- <img src="images/banner_text_1.png" alt="Image placeholder" class="img-md-fluid"> -->
           </div>
 
@@ -224,7 +298,8 @@
               <span class="icon custom-icon flaticon-scissors"></span>
               <h1 class="h">Panck</h1>
               <h1 class="h">Preço: 500 <sup>KZ</sup></h1>
-              <button type="button" class="btn btn-lg btn-outline-warning">Agendar</button>
+              <button type="button" class="btn btn-lg btn-outline-warning" data-toggle="modal"
+                data-target="#exampleModal">Agendar</button>
             </div>
           </a>
 
@@ -233,7 +308,8 @@
               <span class="icon custom-icon flaticon-scissors"></span>
               <h1 class="h">Francês</h1>
               <h1 class="h">Preço: 700 <sup>KZ</sup></h1>
-              <button type="button" class="btn btn-lg btn-outline-warning">Agendar</button>
+              <button type="button" class="btn btn-lg btn-outline-warning" data-toggle="modal"
+                data-target="#exampleModal">Agendar</button>
             </div>
           </a>
 
@@ -242,7 +318,8 @@
               <span class="icon custom-icon flaticon-scissors"></span>
               <h1 class="h">Dois Tempos</h1>
               <h1 class="h">Preço: 500 <sup>KZ</sup></h1>
-              <button type="button" class="btn btn-lg btn-outline-warning">Agendar</button>
+              <button type="button" class="btn btn-lg btn-outline-warning" data-toggle="modal"
+                data-target="#exampleModal">Agendar</button>
             </div>
           </a>
 
@@ -251,7 +328,8 @@
               <span class="icon custom-icon flaticon-scissors"></span>
               <h1 class="h">Panck</h1>
               <h1 class="h">Preço: 500 <sup>KZ</sup></h1>
-              <button type="button" class="btn btn-lg btn-outline-warning">Agendar</button>
+              <button type="button" class="btn btn-lg btn-outline-warning" data-toggle="modal"
+                data-target="#exampleModal">Agendar</button>
             </div>
           </a>
 
@@ -260,7 +338,8 @@
               <span class="icon custom-icon flaticon-scissors"></span>
               <h1 class="h">Francês</h1>
               <h1 class="h">Preço: 700 <sup>KZ</sup></h1>
-              <button type="button" class="btn btn-lg btn-outline-warning">Agendar</button>
+              <button type="button" class="btn btn-lg btn-outline-warning" data-toggle="modal"
+                data-target="#exampleModal">Agendar</button>
             </div>
           </a>
 
@@ -269,7 +348,8 @@
               <span class="icon custom-icon flaticon-scissors"></span>
               <h1 class="h black">Careca</h1>
               <h1 class="h black">Preço: 500 <sup>KZ</sup></h1>
-              <button type="button" class="btn btn-lg btn-outline-warning">Agendar</button>
+              <button type="button" class="btn btn-lg btn-outline-warning" data-toggle="modal"
+                data-target="#exampleModal">Agendar</button>
             </div>
           </a>
         </div>
@@ -296,7 +376,8 @@
             <p>Faça ajustes básicos na sua barba</p>
           </div>
           <div class="card-footer">
-            <button type="button" class="btn btn-block btn-outline-warning">Agendar</button>
+            <button type="button" class="btn btn-block btn-outline-warning" data-toggle="modal"
+              data-target="#exampleModal">Agendar</button>
           </div>
         </div>
       </div>
@@ -314,7 +395,8 @@
             <p>Ajuste da barba <span class="plus text-success">+</span> Tratamentos</p>
           </div>
           <div class="card-footer">
-            <button type="button" class="btn btn-block btn-outline-warning">Agendar</button>
+            <button type="button" class="btn btn-block btn-outline-warning" data-toggle="modal"
+              data-target="#exampleModal">Agendar</button>
           </div>
         </div>
       </div>
@@ -339,7 +421,8 @@
             <p>Faça uma limpeza simples do cabelo</p>
           </div>
           <div class="card-footer">
-            <button type="button" class="btn btn-block btn-outline-warning">Agendar</button>
+            <button type="button" class="btn btn-block btn-outline-warning" data-toggle="modal"
+              data-target="#exampleModal">Agendar</button>
           </div>
         </div>
       </div>
@@ -357,7 +440,8 @@
             <p>Faça uma limpeza completa do cabelo </p>
           </div>
           <div class="card-footer">
-            <button type="button" class="btn btn-block btn-outline-warning">Agendar</button>
+            <button type="button" class="btn btn-block btn-outline-warning" data-toggle="modal"
+              data-target="#exampleModal">Agendar</button>
           </div>
         </div>
       </div>
@@ -403,7 +487,7 @@
 
   <!-- Ou clients -->
   <hr class="hr mt-5" id="feedback">
-  <h1 class="text-center" style="margin-top: 30px;" >O que nosso clientes dizem</h1>
+  <h1 class="text-center" style="margin-top: 30px;">O que nosso clientes dizem</h1>
   <div class="container-fluid mt-5 mb-5">
     <div class="row justify-content-sm-center">
       <div class="col-sm-6 col-md-4 testimonial">
@@ -445,7 +529,8 @@
           <h3 class="mb-4">Sobre</h3>
           <p class="mb-4">Deixe o seu cabelo nas mãos dos melhores artistas!</p>
           <ul class="list-unstyled ">
-            <li class="d-flex"><span class="mr-3"><span class="icon ion-ios-location"></span></span><span class="">Unitel, Via C3, Talatona Plaza</span></li>
+            <li class="d-flex"><span class="mr-3"><span class="icon ion-ios-location"></span></span><span
+                class="">Unitel, Via C3, Talatona Plaza</span></li>
             <li class="d-flex"><span class="mr-3"><span class="icon ion-ios-telephone"></span></span><span
                 class="">+(244) 984 823 282</span></li>
             <li class="d-flex"><span class="mr-3"><span class="icon ion-email"></span></span><span
